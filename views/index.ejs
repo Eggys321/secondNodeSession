@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- <link rel="stylesheet" href="style.css"> -->
+ 
+  <%- include('../partials/head.ejs') %> 
+  <body >
+
+    <%- include('../partials/nav.ejs') %> 
+    
+    <h2>Welcome To My EJS Home Page</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus explicabo corporis iure libero modi odit molestiae quam sit maiores officia.</p>
+    
+    <% if(News.length ){%> 
+      <h1>COMPANIES</h1>
+      <% News.map((singleNews)=>{ %> 
+        <a href="/index/<%-singleNews._id%>">
+          <h5> <%= singleNews.title  %>  </h5>
+        <p> <%= singleNews.snippet  %>  </p>
+        <p>  <%= singleNews.body  %>  </p>
+        </a>
+        <% }) %> 
+        <% }else{ %>
+          <h2>  No news today  </h2>
+          <% } %>
+          
+          
+          <%- include('../partials/footer.ejs') %> 
+
+  </body>
+</html>

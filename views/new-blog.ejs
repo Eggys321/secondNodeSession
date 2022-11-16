@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+   <%- include('../partials/head.ejs') %> 
+
+  <body>
+        <%- include('../partials/nav.ejs') %> 
+
+   
+  
+    <h2>Welcome To My EJS Blog Page</h2>
+    <form action="/" method="post">
+      <label for="title">Title</label>
+      <input type="text" id="title" name="title"><br>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="snippet"><br>
+      <label for="message">Message</label>
+      <textarea name="body" id="message" cols="30" rows="10"></textarea>
+      <button>Submit</button>
+  
+      
+
+    </form>
+     <%- include('../partials/footer.ejs') %>
+  </body>
+</html>
